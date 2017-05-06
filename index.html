@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Food Finder</title>
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -14,10 +14,16 @@
 	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 
 	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" defer></script>
-	<script defer>new WOW().init()</script>
+	<script defer>
+		$(document).ready(function(){
+        new WOW().init();
+      });
+	</script>
 
 
 </head>
@@ -33,46 +39,96 @@
 	</header>
 	<main class="container-fluid">
 		<section>
+			<nav class="navbar-form" role="navigation">
+			  <div class="container-fluid">
+			    <!-- Brand and toggle get grouped for better mobile display -->
+			    <div class="navbar-header">
+			      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
+			    </div>
+
+			    <!-- Collect the nav links, forms, and other content for toggling -->
+			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			      <ul class="nav navbar-nav">
+			      	<li class="dropdown">
+			          <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Filter <span class="caret"></span></a>
+			          <ul style="min-width: 300px;" class="dropdown-menu">
+			          <li>Cuisines</li>
+			            <li>
+			            	<div class="row">
+			            		<div class="col-md-6"><input type="checkbox"> Français </div>
+			            		<div class="col-md-6"><input type="checkbox"> Italien </div>
+			            		<div class="col-md-6"><input type="checkbox"> Japonais </div>
+			            		<div class="col-md-6"><input type="checkbox"> Allemand </div>
+			            		<div class="col-md-6"><input type="checkbox"> Cuisines du Monde </div>
+			            		<div class="col-md-6"><input type="checkbox"> Russe </div>
+			            		<div class="col-md-6"><input type="checkbox"> Asiatique </div>
+			            		<div class="col-md-6"><input type="checkbox"> Chinois </div>
+			            		<div class="col-md-6"><input type="checkbox"> Mediterranéen </div>
+			            		<div class="col-md-6"><input type="checkbox"> Sushi </div>
+			            		<div class="col-md-6"><input type="checkbox"> Americain </div>
+			            		<div class="col-md-6"><input type="checkbox"> Burgers </div>
+			            		<div class="col-md-6"><input type="checkbox"> Indien </div>
+			            		<div class="col-md-6"><input type="checkbox"> Thai </div>
+			            	</div>
+			            </li>
+			          </ul>
+			        </li>
+			        <li>
+			        	<div class="form-group">
+					    	<input type="text" class="form-control" placeholder="Search">
+					  	</div>
+					 </li>
+			      </ul>
+			    </div><!-- /.navbar-collapse -->
+			  </div><!-- /.container-fluid -->
+			</nav>
+		</section>
+		<section>
 			<div class="row restGrid text-center">
 				<div class="col-md-3">
-					<div id="rest1" class="tph"></div>
-					<span>Sushi Shop - Merignac</span>
-					<p> Japonais * Sushi</p>
+					<div id="rest1" class="tph wow flipInY animated" -wow-duration="1000ms"></div>
+					<span class="wow bounceInUp animated">Sushi Shop - Merignac</span>
+					<p class="wow lightSpeedIn animated"> Japonais * Sushi</p>
 				</div>
 				<div class="col-md-3">
-					<div id="rest2" class="tph"></div>
-					<span>Baïla Pizza</span>
-					<p> Italien * Pizza * Bio</p>
+					<div id="rest2" class="tph wow flipInY animated" -wow-duration="1000ms"></div>
+					<span class="wow bounceInUp animated">Baïla Pizza</span>
+					<p class="wow lightSpeedIn animated"> Italien * Pizza * Bio</p>
 				</div>
 				<div class="col-md-3">
-					<div id="rest3" class="tph"></div>
-					<span>L'Essentiel</span>
-					<p>Français * Tapas * Vin</p>
+					<div id="rest3" class="tph wow flipInY animated" -wow-duration="1000ms"></div>
+					<span class="wow bounceInUp animated">L'Essentiel</span>
+					<p class="wow lightSpeedIn animated">Français * Tapas * Vin</p>
 				</div>
 				<div class="col-md-3">
-					<div id="rest4" class="tph"></div>
-					<span>Eat Salade - Mérignac</span>
-					<p> Français * Salade * Healthy</p>
+					<div id="rest4" class="tph wow flipInY animated" -wow-duration="1000ms"></div>
+					<span class="wow bounceInUp animated">Eat Salade - Mérignac</span>
+					<p class="wow lightSpeedIn animated"> Français * Salade * Healthy</p>
 				</div>
 				<div class="col-md-3">
-					<div id="rest5" class="tph"></div>
-					<span>231 East Streat - Mérignac</span>
-					<p>Américain * Burgers</p>
+					<div id="rest5" class="tph wow flipInY animated" -wow-duration="1000ms"></div>
+					<span class="wow bounceInUp animated">231 East Streat - Mérignac</span>
+					<p class="wow lightSpeedIn animated">Américain * Burgers</p>
 				</div>
 				<div class="col-md-3">
-					<div id="rest6" class="tph"></div>
-					<span>Domo</span>
-					<p>Chinois</p>
+					<div id="rest6" class="tph wow flipInY animated" -wow-duration="1000ms"></div>
+					<span class="wow bounceInUp animated">Domo</span>
+					<p class="wow lightSpeedIn animated">Chinois</p>
 				</div>
 				<div class="col-md-3">
-					<div id="rest7" class="tph"></div>
-					<span>Ché moi</span>
-					<p> Français * bistro</p>
+					<div id="rest7" class="tph wow flipInY animated" -wow-duration="1000ms"></div>
+					<span class="wow bounceInUp animated">Ché moi</span>
+					<p class="wow lightSpeedIn animated"> Français * bistro</p>
 				</div>
 				<div class="col-md-3">
-					<div id="rest8" class="tph"></div>
-					<span>Nâga</span>
-					<p>Asiatique * Cambodgien</p>
+					<div id="rest8" class="tph wow flipInY animated" -wow-duration="1000ms"></div>
+					<span class="wow bounceInUp animated">Nâga</span>
+					<p class="wow lightSpeedIn animated">Asiatique * Cambodgien</p>
 				</div>
 			</div>
 
