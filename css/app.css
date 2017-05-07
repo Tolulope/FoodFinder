@@ -29,7 +29,8 @@ input {
 .restGrid {
     font-size: 2.5rem;
 }
-.restGrid span {
+.name {
+    font-size: 2rem;
     color: #A7C9CA;
 }
 .restGrid p {
@@ -67,7 +68,11 @@ input {
 }
 
 .tph {
-    height: 250px;
+    height: 210px;
+    background-repeat: no-repeat !important;
+    background-position: right top;
+    -webkit-background-size: cover !important;
+    background-size: cover !important;
 }
 .navbar-nav {
     width: 100%;

@@ -1,0 +1,79 @@
+<header class="container-fluid">
+  <div class="row text-center">
+    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+      <form action="" class="wow bounceInRight animated" data-wow-delay="700ms" data-wow-duration="500ms">
+        <input id="adress" class="form-control" type="text" placeholder="Your Adress">
+      </form>
+    </div>
+  </div>
+</header>
+  <main class="container-fluid">
+    <section>
+      <nav class="navbar-form" role="navigation">
+        <div class="container-fluid">
+          <!-- Collect the nav links, forms, and other content for toggling -->
+            <ul class="nav navbar-nav">
+              <div class="row">
+                <li class="col-sm-8 col-xs-12">
+                  <div class="form-group">
+                    <input autocomplete="off" autocorrect="off" class="form-control" ng-keyup="search()" ng-model="query" placeholder="Search people by name, company, location or keywords" spellcheck="false" type="text">
+                  </div>
+                </li>
+                <li class="dropdown col-sm-4 col-xs-12">
+                    <a class="dropdown-toggle wow fadeIn animated" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Filter <span class="caret"></span></a>
+                    <ul style="min-width: 300px;" class="dropdown-menu">
+                    <li>Cuisines</li>
+                      <li>
+                        <div class="row">
+                          <div class="col-xs-6"><input type="checkbox"> Français </div>
+                          <div class="col-xs-6"><input type="checkbox"> Italien </div>
+                          <div class="col-xs-6"><input type="checkbox"> Japonais </div>
+                          <div class="col-xs-6"><input type="checkbox"> Allemand </div>
+                          <div class="col-xs-6"><input type="checkbox"> Cuisines du Monde </div>
+                          <div class="col-xs-6"><input type="checkbox"> Russe </div>
+                          <div class="col-xs-6"><input type="checkbox"> Asiatique </div>
+                          <div class="col-xs-6"><input type="checkbox"> Chinois </div>
+                          <div class="col-xs-6"><input type="checkbox"> Mediterranéen </div>
+                          <div class="col-xs-6"><input type="checkbox"> Sushi </div>
+                          <div class="col-xs-6"><input type="checkbox"> Americain </div>
+                          <div class="col-xs-6"><input type="checkbox"> Burgers </div>
+                          <div class="col-xs-6"><input type="checkbox"> Indien </div>
+                          <div class="col-xs-6"><input type="checkbox"> Thai </div>
+                        </div>
+                      </li>
+                    </ul>
+                </li>
+              </div>
+            </ul>
+        </div><!-- /.container-fluid -->
+      </nav>
+    </section>
+    <section>
+        <div class="row restGrid text-center">
+      <div ng-repeat="hit in hits">
+          <div style="height: 300px" class="col-sm-6 col-md-3">
+            <div ng-style="{'background':'url({{hit.image}}) #fff center'}" class="tph wow flipInY animated" -wow-duration="1000ms"></div>
+            <div class="powered" ng-if="hit.provider == 'deliveroo'">Powered By <img src="imgs/logo/deliveroo.png" alt=""></div>
+            <div class="powered" ng-if="hit.provider == 'foodora'">Powered By <img src="imgs/logo/foodora.png" alt=""></div>
+            <span class="name wow bounceInUp animated" ng-bind-html="hit._highlightResult.name.value"></span>
+            <p class="wow lightSpeedIn animated" ng-bind-html="hit._highlightResult.tags.value"></p>
+            <!-- <abbr title="Phone">P:</abbr><span ng-bind-html="hit._highlightResult.phone.value"></span> -->
+          </div>
+        </div>
+      </div>  <!-- ng-repeat -->
+    </section>
+  </main>
+      <!-- <div class="col-sm-4">
+        <div ng-bind-html="hit._highlightResult.name.value"></div>
+        <div ng-bind-html="hit._highlightResult.email.value"></div>
+        <div ng-bind-html="hit._highlightResult.web.value"></div>
+        <div ng-bind-html="hit._highlightResult.organisation.value"></div>
+      </div>
+      <div class="col-sm-4">
+         <address>
+          <span ng-bind-html="hit._highlightResult.company.value"></span><br>
+          <span ng-bind-html="hit._highlightResult.address.value"></span><br>
+          <span>
+          ng-bind-html="hit._highlightResult.city.value + ' ' + hit._highlightResult.state.value + ' ' + hit._highlightResult.zip.value">
+        </span><br> -->
+<!--   <p ng-show="!hits.length" class="text-center">No results are matching your query.</p> -->
