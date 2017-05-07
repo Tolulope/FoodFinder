@@ -1,7 +1,7 @@
 <header class="container-fluid">
     <div style="width: 60%; margin: 0 auto; position: relative; top: 25%;">
-    <img class="img-responsive" src="logo.png" alt="">
-  </div>
+      <img class="img-responsive" src="logo.png" alt="">
+    </div>
   <<!-- div class="row text-center">
     <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
       <div><img src="imgs/LogoF.png" alt=""></div>
@@ -20,7 +20,7 @@
             <ul class="nav navbar-nav">
               <div class="row" >
                 <li class="col-sm-12" >
-                  <div class="form-group" style="width: 50%;">
+                  <div class="form-group" class="truc">
                     <input style="width: 100%;" autocomplete="off" autocorrect="off" class="form-control" ng-keyup="search()" ng-model="query" placeholder="Search !" spellcheck="false" type="text">
                   </div>
                 </li>
@@ -56,14 +56,16 @@
     <section>
         <div class="row restGrid text-center">
       <div ng-repeat="hit in hits">
-          <div style="height: 300px" class="col-sm-6 col-md-3">
-            <div ng-style="{'background':'url({{hit.image}}) #fff center'}" class="tph wow flipInY animated" -wow-duration="1000ms"></div>
-            <div class="powered" ng-if="hit.provider == 'deliveroo'">Powered By <img src="imgs/logo/deliveroo.png" alt=""></div>
-            <div class="powered" ng-if="hit.provider == 'foodora'">Powered By <img src="imgs/logo/foodora.png" alt=""></div>
-            <span class="name wow bounceInUp animated" ng-bind-html="hit._highlightResult.name.value"></span>
-            <p class="wow lightSpeedIn animated" ng-bind-html="hit._highlightResult.tags.value"></p>
-            <!-- <abbr title="Phone">P:</abbr><span ng-bind-html="hit._highlightResult.phone.value"></span> -->
-          </div>
+          <a href="{{hit.url}}" target="_blank">
+            <div style="height: 300px" class="col-sm-6 col-md-3">
+              <div ng-style="{'background':'url({{hit.image}}) #fff center'}" class="tph wow flipInY animated" -wow-duration="1000ms"></div>
+              <div class="powered" ng-if="hit.provider == 'deliveroo'">Powered By <img src="imgs/logo/deliveroo.png" alt=""></div>
+              <div class="powered" ng-if="hit.provider == 'foodora'">Powered By <img src="imgs/logo/foodora.png" alt=""></div>
+              <span class="name wow bounceInUp animated" ng-bind-html="hit._highlightResult.name.value"></span>
+              <p class="wow lightSpeedIn animated" ng-bind-html="hit._highlightResult.tags.value"></p>
+              <!-- <abbr title="Phone">P:</abbr><span ng-bind-html="hit._highlightResult.phone.value"></span> -->
+            </div>
+          </a>
         </div>
       </div>  <!-- ng-repeat -->
     </section>

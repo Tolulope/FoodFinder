@@ -80,7 +80,7 @@ input {
 }
 @media screen and (max-width: 361px) {
     .navbar-nav {
-        width: auto;
+        width: 100%;
     }
 }
 .navbar-nav li {
