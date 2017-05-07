@@ -12,7 +12,7 @@ header {
 	background: #ffffff url("../imgs/delivery.jpeg") no-repeat center;
 	height: 100vh;
 }
-#adress {
+#address-input {
     position: absolute;
     top: 45vh;
 }
