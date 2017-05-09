@@ -1,5 +1,5 @@
 <header class="container-fluid">
-    <div style="width: 60%; margin: 0 auto; position: relative; top: 25%;">
+    <div style="width: 60%; margin: 0 auto; position: relative; top: 15%; background-color: rgba(255, 255, 255, 0.5)">
       <img class="img-responsive" src="logo.png" alt="">
     </div>
   <<!-- div class="row text-center">
@@ -15,7 +15,7 @@
   <main class="container-fluid">
     <section id="hophop">
       <nav id="myNavbar" class="myNavbar navbar-form" role="navigation">
-        <div class="container-fluid">
+        <div style="margin-bottom: 2rem;" class="container-fluid">
           <div class="row">
             <div class="col-md-offset-3 col-md-6">
                 <input style="width: 100%;" autocomplete="off" autocorrect="off" class="form-control" ng-keyup="search()" ng-model="query" placeholder="Search !" spellcheck="false" type="text">
@@ -55,13 +55,12 @@
         <div class="row restGrid text-center">
       <div ng-repeat="hit in hits">
           <a href="{{hit.url}}" target="_blank">
-            <div style="height: 300px" class="col-sm-6 col-md-3">
+            <div style="height: 310px" class="col-sm-6 col-md-3">
               <div ng-style="{'background':'url({{hit.image}}) #fff center'}" class="tph wow flipInY animated" -wow-duration="1000ms"></div>
               <div class="powered" ng-if="hit.provider == 'deliveroo'">Powered By <img src="imgs/logo/deliveroo.png" alt=""></div>
               <div class="powered" ng-if="hit.provider == 'foodora'">Powered By <img src="imgs/logo/foodora.png" alt=""></div>
               <span class="name wow bounceInUp animated" ng-bind-html="hit._highlightResult.name.value"></span>
               <p class="wow lightSpeedIn animated" ng-bind-html="hit._highlightResult.tags.value"></p>
-              <!-- <abbr title="Phone">P:</abbr><span ng-bind-html="hit._highlightResult.phone.value"></span> -->
             </div>
           </a>
         </div>

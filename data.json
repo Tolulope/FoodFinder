@@ -2,8 +2,7 @@
    {
       "id":35902,
       "tags":[
-         "Français",
-         "Boulangerie Pâtisserie"
+         "Français Boulangerie Pâtisserie"
       ],
       "image":"https://cdn1.deliveroo.co.uk/media/menus/27770/400x225.jpg?v=1490048240&quality=80",
       "new":false,
@@ -18,9 +17,7 @@
    {
       "id":22415,
       "tags":[
-         "Brunch",
-         "Petit Déjeuner",
-         "Français"
+         "Brunch Petit Déjeuner Français"
       ],
       "image":"https://cdn1.deliveroo.co.uk/media/menus/19201/400x225.jpg?v=1477471229&quality=80",
       "new":false,
@@ -357,9 +354,7 @@
    {
       "id":15115,
       "tags":[
-         "Glaces",
-         "Dessert",
-         "Italien"
+         "Glaces Dessert Italien"
       ],
       "image":"https://cdn1.deliveroo.co.uk/media/menus/18565/400x225.jpg?v=1473408098&quality=80",
       "new":false,
