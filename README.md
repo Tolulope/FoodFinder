@@ -1,8 +1,8 @@
-algolia-angular-example
-=======================
+# algolia-angular
+  ===============
 
-Example of using http://www.algolia.com/ search with Angular.js
+## Hackathon Bordeaux mai 2017
 
-To run it locally you can start the server e.g. ```python -m SimpleHTTPServer 2000``` to enable CROS for template.html.
-
-live demo http://lukasz-madon.github.io/algolia-angular-example
+Récupération de données des sites foodora et deliveroo en scraping avec CasperJs et FantomJs
+Utilisation de l'api d'Algolia pour la recherche.
+Affichage avec Angular $scope
